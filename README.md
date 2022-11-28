@@ -1,27 +1,65 @@
-# PersonasApp
+# Proyecto Personas
+## Crud creado para una Personas 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
-## Development server
+Proyecto que se encarga de el manteniemiento de Personas (Alta, baja , modificacion y consulta).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Instruciones para levantar el Backend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para la instalacion del proyecto es necesario descargar el proyecto desde una consola que puede ser CMD MS-DOS , PowerShell o Git Bash Here
+una vez clonado el repositorio debera tener instalado algun IDE como Spring Toll
+Suite o Eclipse asi como IntelliJ Idea
+- Dentro del Ide debera importar el proyecto yendo al menu File -Import, seleccionar la carpeta Maven y luego la opcion Existing Maven Project
+una vez que el IDE termine de compilar y importar las librerias necesarias posicionarse en la carpeta raiz del proeycto (en este caso com.developer.springboot.backend.apirest)  y con boton derecho del mouse seleccionar la opcion Run As -> Spring Boot App (estas instrucciones estan basadas en el Ide Spring Tool Suite)
 
-## Build
+- Luego en el navegador ingresar a la url : http://localhost:8080/ 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Instruciones para levantar el Frontend
 
-## Running unit tests
+Para la instalacion del proyecto es necesario descargar el proyecto desde una consola que puede ser CMD MS-DOS , PowerShell o Git Bash Here
+una vez clonado el repositorio debera tener instalado algun IDE como **Visual Strudio Code**
+- Dentro del Ide una vez clonado el proyecto debera importarlo para visualizar el codigo de la aplicacion creada con el framenwork de Angular , esto lo puede hacer desde el menu Archivo ->
+Abrir Carpeta o desde cualquier consola nombradas anteriormente escribiendo la instrucción code . 
+para levantar el servidor y ver la aplicacion en el navegador debera ejecutar el comando 
+ng-serve --o y esto abrira la aplicación en el navegador que tenga como predeterminado.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+si no tambien desde el navegador debera ir a la siguiente url :
 
-## Running end-to-end tests
+http://localhost:4200
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**Dato** Debera primero levantar el backend ya que si no se levanta el backend no correra la aplicación.
 
-## Further help
+# Base de datos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Utilce una base de datos en memoria H2 la cual puede ingresar http://localhost:8080/h2-console/
+
+JDBC URL : jdbc:h2:mem:test
+
+User Name : sa 
+
+sin contraseña
+
+# Tecnologias BAckend
+
+- Java 1.8 
+- Spring Boot 
+- Spring Data Jpa
+
+# Tecnologias Frontend
+
+- JavaScript 
+- Html 5
+- Css 3
+- Bootstrap 4
+- Angular 7
+
+
+Creado por **Cesar Aramayo**
+
+
+
+
+
+
+
