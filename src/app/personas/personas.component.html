@@ -1,0 +1,41 @@
+<div class="card bg-light mb-3">
+  <div class="card-header">Personas</div>
+  <div class="card-body">
+    <h5 class="card-title text-center">Listado de Personas</h5>
+   <div class="my-2 text-right">
+    <button class="btn btn-success" type="button" [routerLink]="['/personas/form']">Nuevo</button>
+   </div>
+    <div *ngIf="personas?.length == 0" class="alert-info p-3">
+        No hay registros en la base de datos!
+    </div>
+    <table class="table table-hover" *ngIf="personas?.length>0">
+      <thead>
+        <tr>
+          <th class="text-center">id</th>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Apellido</th>
+          <th class="text-center">Numero Documento</th>
+          <th class="text-center">Tipo Documento</th>
+          <th class="text-center">Fecha Nacimiento</th>
+          <th class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let persona of personas">
+          <td class="text-center">{{ persona.perId }}</td>
+          <td class="text-center">{{ persona.perNombre }}</td>
+          <td class="text-center">{{ persona.perApellido }}</td>
+          <td class="text-center">{{ persona.perNumeroDocumento }}</td>
+
+          <td class="text-center">{{ persona.perTipoDocumento }}</td>
+          <td class="text-center">{{ persona.perFechaNacimiento }}</td>
+          <td>
+
+            <button class="btn btn-primary fas fa-edit" type="button" name="button" [routerLink]="['/personas/form',persona.perId]"></button>
+             <button type="button" name="eliminar" (click)='delete(persona)' class="fas fa-trash btn btn-danger ml-4"></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

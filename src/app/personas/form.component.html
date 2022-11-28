@@ -1,0 +1,88 @@
+
+<div class="card ">
+  <div class="card-header">{{titulo}}</div>
+  <div class="card-body">
+    <form (ngSubmit)="create()" #personaForm ="ngForm">
+
+      
+      <div class="form-group row">
+        <label for="nombre" class="col-form-label col-sm-4">Nombre</label>
+        <label for="apellido" class="col-form-label col-sm-4">Apellido</label>
+        <label for="" class="col-form-label col-sm-4">Numero Documento</label>
+        
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" [(ngModel)]="persona.perNombre" name="nombre" required #perNombre ="ngModel"> 
+         <div class="alert alert-danger p-2" *ngIf="perNombre.invalid && (perNombre.dirty || perNombre.touched)">
+          <div *ngIf="perNombre.errors.required">
+               Nombre es requerido
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" [(ngModel)]="persona.perApellido" name="apellido" required #perApellido ="ngModel"> 
+          <div class="alert alert-danger p-2" *ngIf="perApellido.invalid && (perApellido.dirty || perApellido.touched)">
+            <div *ngIf="perApellido.errors.required">
+                 Apellido es requerido
+            </div>
+           </div>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" [(ngModel)]="persona.perNumeroDocumento" name="numeroDocumento" required #perNumeroDocumento ="ngModel"> 
+          <div class="alert alert-danger p-2" *ngIf="perNumeroDocumento.invalid && (perNumeroDocumento.dirty || perNumeroDocumento.touched)">
+            <div *ngIf="perNumeroDocumento.errors.required">
+                 Numero Documento es requerido
+            </div>
+           </div>
+        </div>
+
+      </div>
+      <div class="form-group row">
+        
+      </div>
+      <div class="form-group row">
+        <label for="tipoDocumento" class="col-form-label col-sm-4">Tipo Documento</label>
+       
+        <label for="fechaNacimiento" class="col-form-label col-sm-4">Fecha Nacimiento</label>
+        
+      </div>
+      <div class="form-group row">
+        
+        <div class="col-sm-4">
+          <select class="form-control" type="text" name="tipoDocumento" [(ngModel)]="persona.perTipoDocumento" required #perTipoDocumento ="ngModel">
+            <option  *ngFor="let item of tipoDocumento">{{item}}</option>
+          </select>
+          <div class="alert alert-danger p-2" *ngIf="perTipoDocumento.invalid && (perTipoDocumento.dirty || perTipoDocumento.touched)">
+            <div *ngIf="perTipoDocumento.errors.required">
+                 Tipo de Documento es requerido
+            </div>
+           </div>
+         
+        </div>
+        <div class="col-sm-4">
+          <input type="date" class="form-control" [(ngModel)]="persona.perFechaNacimiento" name="fechaNacimiento" required #perFechaNacimiento ="ngModel"> 
+          <div class="alert alert-danger p-2" *ngIf="perFechaNacimiento.invalid && (perFechaNacimiento.dirty || perFechaNacimiento.touched)">
+            <div *ngIf="perFechaNacimiento.errors.required">
+                 Fecha Nacimiento es requerida
+            </div>
+           </div>
+        </div>
+
+
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-12 d-flex justify-content-between">
+          <button class="btn btn-success" role="button" [disabled]="!personaForm.form.valid">Guardar</button>
+          <button class="btn btn-primary" role="button" type="button" [routerLink]="['/personas']">Volver</button>
+
+        </div>
+       
+
+
+      </div>
+    </form>
+
+  </div>
+
+</div>
