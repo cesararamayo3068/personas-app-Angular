@@ -18,7 +18,9 @@ una vez que el IDE termine de compilar y importar las librerias necesarias posic
 ## Instruciones para levantar el Frontend
 
 Para la instalacion del proyecto es necesario descargar el proyecto desde una consola que puede ser CMD MS-DOS , PowerShell o Git Bash Here
-una vez clonado el repositorio debera tener instalado algun IDE como **Visual Strudio Code**
+una vez clonado el repositorio en la consola debera ejecutar el comando **npm install** para descargar las dependencias
+luego debera tener instalado algun IDE como **Visual Strudio Code**
+
 - Dentro del Ide una vez clonado el proyecto debera importarlo para visualizar el codigo de la aplicacion creada con el framenwork de Angular , esto lo puede hacer desde el menu Archivo ->
 Abrir Carpeta o desde cualquier consola nombradas anteriormente escribiendo la instrucción code . 
 para levantar el servidor y ver la aplicacion en el navegador debera ejecutar el comando 
